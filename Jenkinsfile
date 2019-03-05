@@ -34,7 +34,7 @@ pipeline {
        {
       steps
       {
-       sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar target/my-app-1.0-SNAPSHOT.jar &'
+       sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar &'
       }
       }
 
