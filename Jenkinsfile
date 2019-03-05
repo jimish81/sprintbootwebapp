@@ -27,14 +27,14 @@ pipeline {
              }      
         stage('Publish') {
    steps {
-    sh 'curl -X PUT -u jimish:APARmshG1mhGExY41HfTjXX5Z8x -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://54.68.77.236:8081/artifactory/libs-release/my-app-1.0-SNAPSHOT.jar"'
+    sh 'curl -X PUT -u jimish:APARmshG1mhGExY41HfTjXX5Z8x -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://18.236.125.160:8081/artifactory/libs-release/my-app-1.0-SNAPSHOT.jar"'
    }
   }
          stage ('Deploy')
        {
       steps
       {
-       sh 'java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar'
+       sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar target/my-app-1.0-SNAPSHOT.jar &'
       }
       }
 
