@@ -34,7 +34,8 @@ pipeline {
        {
       steps
       {
-       sh 'JENKINS_NODE_COOKIE=dontKillMe nohup java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar &'
+       sh "sudo docker build --tag=jenkin-docker:springboot ."
+       sh "sudo docker run --name=springboot -d -p 9001:9001 jenkin-docker:springboot"
       }
       }
 
