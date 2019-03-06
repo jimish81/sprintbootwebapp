@@ -1,3 +1,4 @@
+
 From fabric8/java-alpine-openjdk8-jre
 
 # Set the working directory to /app
