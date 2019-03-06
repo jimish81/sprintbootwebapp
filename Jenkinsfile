@@ -27,7 +27,7 @@ pipeline {
         //     }      
         stage('Publish') {
    steps {
-    sh 'curl -X PUT -u jimish:APARmshG1mhGExY41HfTjXX5Z8x -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://18.236.125.160:8081/artifactory/libs-release/my-app-1.0-SNAPSHOT.jar"'
+    sh 'curl -X PUT -u jimish:APARmshG1mhGExY41HfTjXX5Z8x -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://18.237.179.41:8081/artifactory/libs-release/my-app-1.0-SNAPSHOT.jar"'
    }
   }
          stage ('Deploy')
