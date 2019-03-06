@@ -34,8 +34,9 @@ pipeline {
        {
       steps
       {
-       sh "sudo docker build --tag=jenkin-docker:springboot ."
-       sh "sudo docker run --name=springboot -d -p 9001:9001 jenkin-docker:springboot"
+       sh "sudo docker build --tag=jenkin-docker:springboot1 ."
+       //sh "sudo docker tag jenkin-docker:springboot jimish22/jenkin-docker:springboot"
+       sh "sudo docker run --name=springboot1 -d -p 9001:9001 jenkin-docker:springboot1"
       }
       }
 
