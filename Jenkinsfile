@@ -3,7 +3,8 @@ pipeline {
     //login id/docker reposotory defined in Jenkins followe by repository name
     registry = "jimish22/jenkin-docker"
     //credential = Id given jenkins
-    registryCredential = 'DockerHub'
+    //registryCredential = 'DockerHub' <- for coyping image to Docker Hub
+     registryCredential='artifactory'
     dockerImage = ''
     //checked if any container is running with same name node-app container Id will store same & stage cleanup will close that container
     containerId = sh(script: 'docker ps -aqf "name=node-app"', returnStdout: true)
@@ -57,7 +58,8 @@ pipeline {
         stage('Push Image') {
       steps{
          script {
-            docker.withRegistry( '', registryCredential ) {
+             //docker.withRegistry( '', registryCredential ) <- for pushing img to dockerhub
+            docker.withRegistry( 'http://54.245.167.40:8081/artifactory/docker/', registryCredential ) {
             dockerImage.push()
           }
         }
