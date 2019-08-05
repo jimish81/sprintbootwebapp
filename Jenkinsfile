@@ -25,11 +25,11 @@ pipeline {
     sh 'java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar'
    }
   }
-  stage('Publish') {
-   steps {
-    sh 'curl -X PUT -u test:AP9FdXXr3Ger7RjvG5sDmMQRAPf -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://35.200.190.192:8081/artifactory/mavenbuild/sprintbootwebapp-0.0.1-SNAPSHOT.jar"'
-   }
-  }
+ // stage('Publish') {
+  // steps {
+   // sh 'curl -X PUT -u test:AP9FdXXr3Ger7RjvG5sDmMQRAPf -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://35.200.190.192:8081/artifactory/mavenbuild/sprintbootwebapp-0.0.1-SNAPSHOT.jar"'
+   //}
+  //}
 
  }
 }
