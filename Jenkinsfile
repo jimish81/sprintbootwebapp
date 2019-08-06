@@ -24,7 +24,7 @@ pipeline {
    steps {
     //sh 'java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar'
     sh "sudo docker build --tag=jendocker:sprintboot ."
-    sh "sudo docker run --name=sprintboot -d -p 3031:3031 jendocker:sprintboot"
+    sh "sudo docker run --name=sprintboot -d -p 3030:3030 jendocker:sprintboot"
    }
   } 
 //  stage('Publish') {
