@@ -25,8 +25,8 @@ pipeline {
     sh 'java -jar target/sprintbootwebapp-0.0.1-SNAPSHOT.jar'
    }
   }
-   stage('Publish') {
-   steps {
+    stage('Publish') {
+      steps {
      sh 'curl -X PUT -u jimish:AP6NosS6vzZhFskLQ3d14JHq6E7 -T target/sprintbootwebapp-0.0.1-SNAPSHOT.jar "http://34.93.193.130:8081/artifactory/maven/sprintbootwebapp-0.0.1-SNAPSHOT.jar"'
     }
     }
